@@ -1,0 +1,29 @@
+[
+  {
+    "id": "walk",
+    "type": "Walk",
+    "label": "Walk 10 min",
+    "emoji": "🚶‍♀️",
+    "description": "A brisk 10-minute walk helps metabolise sugar and boosts energy levels.",
+    "duration": "10 minutes",
+    "pointsByLevel": { "Low": 10, "Medium": 20, "High": 30 }
+  },
+  {
+    "id": "exercise",
+    "type": "Exercise",
+    "label": "Exercise 5 min",
+    "emoji": "🏋️",
+    "description": "5 minutes of jumping jacks, squats or any cardio accelerates glucose uptake.",
+    "duration": "5 minutes",
+    "pointsByLevel": { "Low": 10, "Medium": 20, "High": 30 }
+  },
+  {
+    "id": "hydration",
+    "type": "Hydration",
+    "label": "Drink water",
+    "emoji": "💧",
+    "description": "Drinking a full glass of water helps dilute sugar concentration in the blood.",
+    "duration": "Immediate",
+    "pointsByLevel": { "Low": 10, "Medium": 20, "High": 30 }
+  }
+]

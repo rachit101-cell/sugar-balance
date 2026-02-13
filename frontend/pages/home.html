@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sugar Streaker – The Future to Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FFF8F0;
+  --blush: #FFD6D6;
+  --lavender: #E8D5F5;
+  --mint: #C8F0E0;
+  --sky: #C8E8FF;
+  --rose: #FF8FA3;
+  --violet: #C084FC;
+  --teal: #34D399;
+  --coral: #FB7185;
+  --glass-bg: rgba(255,255,255,0.55);
+  --glass-border: rgba(255,255,255,0.8);
+  --shadow-soft: 0 8px 32px rgba(180,140,200,0.15);
+  --radius-xl: 36px;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #FFF8F0 0%, #F5E8FF 35%, #E8F5FF 70%, #E8FFF5 100%);
+  min-height: 100vh;
+  color: #3D2B4E;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 700px 500px at 15% 20%, rgba(232,213,245,0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 400px at 85% 80%, rgba(200,232,255,0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 300px at 50% 50%, rgba(200,240,224,0.25) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatBlob 12s ease-in-out infinite alternate;
+}
+.blob-1 { width: 400px; height: 400px; background: #FFD6D6; top: -100px; left: -100px; }
+.blob-2 { width: 350px; height: 350px; background: #C8F0E0; bottom: 100px; right: -80px; animation-delay: -3s; }
+.blob-3 { width: 300px; height: 300px; background: #E8D5F5; top: 50%; left: 60%; animation-delay: -6s; }
+
+@keyframes floatBlob {
+  from { transform: translate(0,0) scale(1); }
+  to { transform: translate(30px,20px) scale(1.08); }
+}
+
+.hero-section {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content {
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #7C6E8C;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-badge .emoji {
+  font-size: 1.2rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #2D1B3E;
+}
+
+h1 .gradient-text {
+  background: linear-gradient(135deg, #C084FC, #FB7185);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #6B5B7C;
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+.cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #C084FC, #FB7185);
+  color: white;
+  box-shadow: 0 8px 24px rgba(192,132,252,0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(192,132,252,0.5);
+}
+
+.btn-secondary {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid var(--glass-border);
+  color: #5A3F78;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.7);
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeSlideIn 1s ease forwards 0.2s;
+  opacity: 0;
+}
+
+.hero-graphic {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.stats-mini {
+  position: absolute;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 12px 20px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  opacity: 0;
+}
+
+@keyframes popIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+.stats-mini:nth-child(1) {
+  top: 10%;
+  left: -60px;
+  animation-delay: 0.5s;
+  transform: scale(0.8);
+}
+
+.stats-mini:nth-child(2) {
+  top: 60%;
+  right: -40px;
+  animation-delay: 0.7s;
+  transform: scale(0.8);
+}
+
+.stats-mini:nth-child(3) {
+  bottom: 15%;
+  left: -40px;
+  animation-delay: 0.9s;
+  transform: scale(0.8);
+}
+
+.stats-icon {
+  font-size: 1.5rem;
+}
+
+.stats-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-value {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2D1B3E;
+}
+
+.stats-label {
+  font-size: 0.75rem;
+  color: #7C6E8C;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.features-grid {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  animation: fadeSlideIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(180,140,200,0.25);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.feature-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #2D1B3E;
+}
+
+.feature-description {
+  color: #6B5B7C;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .stats-mini {
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 10px auto;
+  }
+
+  .stats-mini:nth-child(1) { top: auto; }
+  .stats-mini:nth-child(2) { top: auto; }
+  .stats-mini:nth-child(3) { bottom: auto; }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="emoji">🍬</span>
+          <span>Gamified Health Platform</span>
+        </div>
+        
+        <h1>
+          The Future to<br>
+          <span class="gradient-text">Health</span>
+        </h1>
+        
+        <p class="hero-description">
+          Track sugar intake, build streaks, earn rewards, and transform your family's health journey into an exciting adventure.
+        </p>
+        
+        <div class="cta-group">
+          <a href="onboarding.html" class="btn btn-primary">
+            Start Your Journey
+            <span>→</span>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-graphic">
+          🍎
+          <div class="stats-mini">
+            <span class="stats-icon">🔥</span>
+            <div class="stats-text">
+              <span class="stats-value">12</span>
+              <span class="stats-label">Day Streak</span>
+            </div>
+          </div>
+          <div class="stats-mini">
+            <span class="stats-icon">⭐</span>
+            <div class="stats-text">
+              <span class="stats-value">1,240</span>
+              <span class="stats-label">Points</span>
+            </div>
+          </div>
+          <div class="stats-mini">
+            <span class="stats-icon">✅</span>
+            <div class="stats-text">
+              <span class="stats-value">84%</span>
+              <span class="stats-label">Tasks Done</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="features-grid" id="features">
+    <div class="feature-card">
+      <span class="feature-icon">📊</span>
+      <h3 class="feature-title">Smart Tracking</h3>
+      <p class="feature-description">
+        Log foods with our intelligent 5-tab interface. Get instant sugar impact analysis and personalized recommendations.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">🏃</span>
+      <h3 class="feature-title">7-Day Marathons</h3>
+      <p class="feature-description">
+        Join weekly challenges designed to build lasting healthy habits. Complete tasks, earn trophies, and celebrate wins.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">👥</span>
+      <h3 class="feature-title">Family Community</h3>
+      <p class="feature-description">
+        Create groups, compete on leaderboards, and support each other. Health is more fun together.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

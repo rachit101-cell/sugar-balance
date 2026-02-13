@@ -1,0 +1,27 @@
+[
+  { "id": "tea",          "name": "Tea",          "emoji": "☕",  "category": "Tea/Coffee",   "sugarLevel": "Low",    "brix": 5  },
+  { "id": "coffee",       "name": "Coffee",       "emoji": "🫖",  "category": "Tea/Coffee",   "sugarLevel": "Low",    "brix": 4  },
+  { "id": "milk_tea",     "name": "Milk Tea",     "emoji": "🧋",  "category": "Tea/Coffee",   "sugarLevel": "Medium", "brix": 12 },
+  { "id": "sweet_latte",  "name": "Sweet Latte",  "emoji": "☕",  "category": "Tea/Coffee",   "sugarLevel": "High",   "brix": 16 },
+
+  { "id": "cream_biscuit","name": "Cream Biscuit","emoji": "🍪",  "category": "Biscuits",     "sugarLevel": "Medium", "brix": 12 },
+  { "id": "salty_biscuit","name": "Salty Biscuit","emoji": "🫙",  "category": "Biscuits",     "sugarLevel": "Medium", "brix": 8  },
+  { "id": "milk_biscuit", "name": "Milk Biscuit", "emoji": "🍪",  "category": "Biscuits",     "sugarLevel": "Medium", "brix": 10 },
+
+  { "id": "coca_cola",    "name": "Coca-Cola",    "emoji": "🥤",  "category": "Cold Drinks",  "sugarLevel": "High",   "brix": 18 },
+  { "id": "sprite",       "name": "Sprite",       "emoji": "🍾",  "category": "Cold Drinks",  "sugarLevel": "High",   "brix": 15 },
+  { "id": "pepsi",        "name": "Pepsi",        "emoji": "🫗",  "category": "Cold Drinks",  "sugarLevel": "High",   "brix": 17 },
+  { "id": "fanta",        "name": "Fanta",        "emoji": "🧃",  "category": "Cold Drinks",  "sugarLevel": "High",   "brix": 16 },
+
+  { "id": "gulab_jamun",  "name": "Gulab Jamun",  "emoji": "🟤",  "category": "Sweets",       "sugarLevel": "High",   "brix": 22 },
+  { "id": "donut",        "name": "Donut",        "emoji": "🍩",  "category": "Sweets",       "sugarLevel": "High",   "brix": 18 },
+  { "id": "jalebi",       "name": "Jalebi",       "emoji": "🟠",  "category": "Sweets",       "sugarLevel": "High",   "brix": 24 },
+  { "id": "ice_cream",    "name": "Ice Cream",    "emoji": "🍦",  "category": "Sweets",       "sugarLevel": "High",   "brix": 20 },
+  { "id": "cake",         "name": "Cake",         "emoji": "🎂",  "category": "Sweets",       "sugarLevel": "High",   "brix": 20 },
+  { "id": "chocolate",    "name": "Chocolate",    "emoji": "🍫",  "category": "Sweets",       "sugarLevel": "Medium", "brix": 14 },
+
+  { "id": "banana",       "name": "Banana",       "emoji": "🍌",  "category": "Fruits",       "sugarLevel": "Low",    "brix": 8  },
+  { "id": "watermelon",   "name": "Watermelon",   "emoji": "🍉",  "category": "Fruits",       "sugarLevel": "Low",    "brix": 6  },
+  { "id": "mango",        "name": "Mango",        "emoji": "🥭",  "category": "Fruits",       "sugarLevel": "Medium", "brix": 14 },
+  { "id": "apple",        "name": "Apple",        "emoji": "🍎",  "category": "Fruits",       "sugarLevel": "Low",    "brix": 10 }
+]

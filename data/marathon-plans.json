@@ -1,0 +1,79 @@
+[
+  {
+    "dayNumber": 1,
+    "title": "Reset Day",
+    "tasks": [
+      "Sleep by 10 PM tonight",
+      "Drink 8 glasses of water",
+      "Skip all sugary drinks today",
+      "10-minute morning walk",
+      "Eat 2 pieces of fruit"
+    ]
+  },
+  {
+    "dayNumber": 2,
+    "title": "Hydrate & Walk",
+    "tasks": [
+      "20-minute brisk walk",
+      "Drink 3L of water",
+      "No cold drinks today",
+      "Have fruit for breakfast",
+      "5-minute stretching routine"
+    ]
+  },
+  {
+    "dayNumber": 3,
+    "title": "Strength Day",
+    "tasks": [
+      "15-minute home exercise",
+      "Eat a healthy breakfast",
+      "Skip all sweets",
+      "Sleep 7+ hours",
+      "Log every meal today"
+    ]
+  },
+  {
+    "dayNumber": 4,
+    "title": "Mindful Eating",
+    "tasks": [
+      "No processed sugar today",
+      "5-minute meditation",
+      "Walk 15 minutes after dinner",
+      "Drink only fresh juice or water",
+      "Sleep check — in bed by 10:30 PM"
+    ]
+  },
+  {
+    "dayNumber": 5,
+    "title": "Challenge Peak",
+    "tasks": [
+      "30-minute physical activity",
+      "Zero soda day",
+      "Include vegetables in every meal",
+      "8+ hours of sleep",
+      "Check in with a community group"
+    ]
+  },
+  {
+    "dayNumber": 6,
+    "title": "Cool Down",
+    "tasks": [
+      "Light yoga or stretching 10 min",
+      "Eat 2 servings of fruit",
+      "Hydrate well throughout the day",
+      "No late-night snacks after 8 PM",
+      "Write 3 things you're grateful for"
+    ]
+  },
+  {
+    "dayNumber": 7,
+    "title": "Victory Day! 🏆",
+    "tasks": [
+      "Full 20-minute workout",
+      "Celebrate with a healthy meal",
+      "Share your success with the community",
+      "Log all food consumed today",
+      "Claim your marathon trophy! 🏆"
+    ]
+  }
+]

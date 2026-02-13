@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Sugar Streaker – Onboarding</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FFF8F0;
+  --blush: #FFD6D6;
+  --lavender: #E8D5F5;
+  --mint: #C8F0E0;
+  --sky: #C8E8FF;
+  --rose: #FF8FA3;
+  --violet: #C084FC;
+  --teal: #34D399;
+  --coral: #FB7185;
+  --glass-bg: rgba(255,255,255,0.55);
+  --glass-border: rgba(255,255,255,0.8);
+  --shadow-soft: 0 8px 32px rgba(180,140,200,0.15);
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #FFF8F0 0%, #F5E8FF 35%, #E8F5FF 70%, #E8FFF5 100%);
+  min-height: 100vh;
+  color: #3D2B4E;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 700px 500px at 15% 20%, rgba(232,213,245,0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 400px at 85% 80%, rgba(200,232,255,0.4) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatBlob 12s ease-in-out infinite alternate;
+}
+.blob-1 { width: 400px; height: 400px; background: #FFD6D6; top: -100px; left: -100px; }
+.blob-2 { width: 350px; height: 350px; background: #C8F0E0; bottom: 100px; right: -80px; animation-delay: -3s; }
+
+@keyframes floatBlob {
+  from { transform: translate(0,0) scale(1); }
+  to { transform: translate(30px,20px) scale(1.08); }
+}
+
+.onboard-card {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  width: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1.5px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--shadow-soft);
+  animation: slideUp 0.6s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.logo-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #FB7185, #C084FC);
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 8px 24px rgba(192,132,252,0.4);
+  margin-bottom: 20px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #2D1B3E;
+}
+
+.subtitle {
+  color: #7C6E8C;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(192,132,252,0.2);
+  transition: var(--transition);
+}
+
+.dot.active {
+  background: linear-gradient(135deg, #C084FC, #FB7185);
+  width: 32px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #5A3F78;
+  margin-bottom: 8px;
+  font-family: var(--font-sans);
+}
+
+input, select {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(192,132,252,0.3);
+  background: rgba(255,255,255,0.7);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: #3D2B4E;
+  transition: var(--transition);
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #C084FC;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 0 4px rgba(192,132,252,0.15);
+}
+
+input::placeholder {
+  color: #A89BB5;
+}
+
+.radio-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  flex: 1;
+  min-width: 140px;
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-label {
+  display: block;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(192,132,252,0.3);
+  background: rgba(255,255,255,0.5);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.radio-option input[type="radio"]:checked + .radio-label {
+  background: linear-gradient(135deg, rgba(192,132,252,0.2), rgba(251,113,133,0.15));
+  border-color: #C084FC;
+  color: #7C3AED;
+  font-weight: 600;
+}
+
+.radio-label:hover {
+  background: rgba(255,255,255,0.8);
+  border-color: #C084FC;
+}
+
+.health-conditions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+  accent-color: #C084FC;
+}
+
+.checkbox-item label {
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #C084FC, #FB7185);
+  color: white;
+  box-shadow: 0 8px 24px rgba(192,132,252,0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(192,132,252,0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.helper-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #7C6E8C;
+}
+
+.helper-text a {
+  color: #C084FC;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.helper-text a:hover {
+  color: #7C3AED;
+  text-decoration: underline;
+}
+
+.step {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.step.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.input-hint {
+  font-size: 0.8rem;
+  color: #9B71C2;
+  margin-top: 6px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .onboard-card {
+    padding: 32px 24px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+  }
+  
+  .radio-option {
+    min-width: 100%;
+  }
+  
+  .health-conditions {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="onboard-card">
+    <div class="logo-header">
+      <div class="logo-icon">🍎</div>
+      <h1>Join Sugar Streaker</h1>
+      <p class="subtitle">Start your journey to better health in 3 simple steps</p>
+    </div>
+
+    <div class="progress-dots">
+      <span class="dot active" data-step="1"></span>
+      <span class="dot" data-step="2"></span>
+      <span class="dot" data-step="3"></span>
+    </div>
+
+    <form id="onboardingForm">
+      <!-- Step 1: Basic Info -->
+      <div class="step active" data-step="1">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+          <span class="input-hint">Minimum 8 characters</span>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="nextStep(2)">
+          Continue
+          <span>→</span>
+        </button>
+      </div>
+
+      <!-- Step 2: Health Profile -->
+      <div class="step" data-step="2">
+        <div class="form-group">
+          <label>Age Group</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="age1" name="age" value="18-30" required>
+              <label for="age1" class="radio-label">18-30</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="age2" name="age" value="31-50">
+              <label for="age2" class="radio-label">31-50</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="age3" name="age" value="51+">
+              <label for="age3" class="radio-label">51+</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male" class="radio-label">Male</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female" class="radio-label">Female</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other" class="radio-label">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" placeholder="70" min="20" max="300" required>
+        </div>
+
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" name="height" placeholder="170" min="100" max="250" required>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="nextStep(3)">
+          Continue
+          <span>→</span>
+        </button>
+      </div>
+
+      <!-- Step 3: Health Goals -->
+      <div class="step" data-step="3">
+        <div class="form-group">
+          <label>Primary Health Goal</label>
+          <select name="goal" required>
+            <option value="">Select your goal</option>
+            <option value="reduce-sugar">Reduce Sugar Intake</option>
+            <option value="weight-loss">Weight Loss</option>
+            <option value="diabetes">Manage Diabetes</option>
+            <option value="energy">Increase Energy</option>
+            <option value="general">General Health</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Activity Level</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="sedentary" name="activity" value="sedentary" required>
+              <label for="sedentary" class="radio-label">Sedentary</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="moderate" name="activity" value="moderate">
+              <label for="moderate" class="radio-label">Moderate</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="active" name="activity" value="active">
+              <label for="active" class="radio-label">Active</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Health Conditions (Optional)</label>
+          <div class="health-conditions">
+            <div class="checkbox-item">
+              <input type="checkbox" id="diabetes" name="conditions" value="diabetes">
+              <label for="diabetes">Diabetes</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="hypertension" name="conditions" value="hypertension">
+              <label for="hypertension">Hypertension</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="cholesterol" name="conditions" value="cholesterol">
+              <label for="cholesterol">High Cholesterol</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="none" name="conditions" value="none">
+              <label for="none">None</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Start My Journey
+          <span>🚀</span>
+        </button>
+      </div>
+    </form>
+
+    <div class="helper-text">
+      Already have an account? <a href="dashboard.html">Sign In</a>
+    </div>
+  </div>
+
+  <script>
+    function nextStep(stepNumber) {
+      // Hide all steps
+      document.querySelectorAll('.step').forEach(step => {
+        step.classList.remove('active');
+      });
+      
+      // Show target step
+      document.querySelector(`.step[data-step="${stepNumber}"]`).classList.add('active');
+      
+      // Update progress dots
+      document.querySelectorAll('.dot').forEach((dot, index) => {
+        if (index < stepNumber) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    document.getElementById('onboardingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Collect form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      console.log('Registration data:', data);
+      
+      // Show success message
+      alert('🎉 Welcome to Sugar Streaker! Redirecting to dashboard...');
+      
+      // Redirect to dashboard
+      window.location.href = 'dashboard.html';
+    });
+
+    // Make 'None' exclusive in health conditions
+    document.getElementById('none').addEventListener('change', function() {
+      if (this.checked) {
+        document.querySelectorAll('input[name="conditions"]').forEach(cb => {
+          if (cb.id !== 'none') cb.checked = false;
+        });
+      }
+    });
+
+    document.querySelectorAll('input[name="conditions"]').forEach(cb => {
+      if (cb.id !== 'none') {
+        cb.addEventListener('change', function() {
+          if (this.checked) {
+            document.getElementById('none').checked = false;
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

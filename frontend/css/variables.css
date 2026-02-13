@@ -1,0 +1,66 @@
+/* ═══════════════════════════════════════════════
+   SUGAR STREAKER — DESIGN TOKENS
+   ═══════════════════════════════════════════════ */
+:root {
+  /* ── Palette ── */
+  --cream:       #FFF8F0;
+  --blush:       #FFD6D6;
+  --lavender:    #E8D5F5;
+  --mint:        #C8F0E0;
+  --sky:         #C8E8FF;
+  --peach:       #FFE0C8;
+  --lemon:       #FFF5C8;
+  --rose:        #FF8FA3;
+  --violet:      #C084FC;
+  --teal:        #34D399;
+  --amber:       #FBBF24;
+  --coral:       #FB7185;
+  --indigo:      #818CF8;
+
+  /* ── Sugar levels ── */
+  --low-sugar:   #34D399;
+  --mid-sugar:   #FBBF24;
+  --high-sugar:  #FB7185;
+
+  /* ── Glass ── */
+  --glass-bg:     rgba(255,255,255,0.55);
+  --glass-border: rgba(255,255,255,0.8);
+  --glass-blur:   blur(20px) saturate(160%);
+
+  /* ── Shadows ── */
+  --shadow-soft:  0 8px 32px rgba(180,140,200,0.15);
+  --shadow-card:  0 4px 20px rgba(180,140,200,0.18);
+  --shadow-glow:  0 0 24px rgba(192,132,252,0.35);
+
+  /* ── Spacing ── */
+  --gap-xs: 8px;
+  --gap-sm: 14px;
+  --gap-md: 20px;
+  --gap-lg: 28px;
+  --gap-xl: 40px;
+
+  /* ── Border radius ── */
+  --r-sm:  12px;
+  --r-md:  18px;
+  --r-lg:  24px;
+  --r-xl:  36px;
+  --r-full: 9999px;
+
+  /* ── Typography ── */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  /* ── Transitions ── */
+  --t-fast:   0.18s cubic-bezier(0.4,0,0.2,1);
+  --t-normal: 0.35s cubic-bezier(0.4,0,0.2,1);
+  --t-bounce: 0.5s cubic-bezier(0.34,1.56,0.64,1);
+
+  /* ── Z-index scale ── */
+  --z-base:       1;
+  --z-nav:     1000;
+  --z-panel:   2000;
+  --z-popup:   3000;
+  --z-toast:   4000;
+  --z-celebrate: 5000;
+}

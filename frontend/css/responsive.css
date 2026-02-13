@@ -1,0 +1,80 @@
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — MOBILE-FIRST BREAKPOINTS
+   ═══════════════════════════════════════════════ */
+
+/* ─── Mobile  < 480px ─── */
+@media (max-width: 479px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .grid-stats, .grid-auto, .grid-food { grid-template-columns: repeat(2,1fr); }
+
+  .modal-card { padding: 28px 20px; }
+  #profilePanel { width: 100%; right: -100%; }
+
+  .corrective-list { grid-template-columns: repeat(3,1fr); }
+  .streak-badge .badge-label { display: none; }
+  .points-pill .pts-label    { display: none; }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+}
+
+/* ─── Tablet  480px – 768px ─── */
+@media (min-width: 480px) and (max-width: 767px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2,1fr); }
+  .grid-stats { grid-template-columns: repeat(2,1fr); }
+}
+
+/* ─── Small desktop  768px – 1024px ─── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-4 { grid-template-columns: repeat(2,1fr); }
+}
+
+/* ─── Nav: hide links on mobile, show hamburger ─── */
+@media (max-width: 767px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 70px; left: 0; right: 0;
+    background: rgba(255,248,240,0.97);
+    backdrop-filter: blur(24px);
+    padding: 20px; gap: 6px;
+    border-bottom: 1px solid rgba(200,180,230,0.3);
+    z-index: calc(var(--z-nav) - 1);
+    animation: fadeSlideIn 0.3s ease both;
+  }
+  body.dark .nav-links.open { background: rgba(18,6,35,0.97); }
+  .ham { display: flex; }
+
+  .community-grid { grid-template-columns: 1fr; }
+  .form-row       { grid-template-columns: 1fr; }
+  .report-halves  { grid-template-columns: 1fr; }
+}
+
+/* ─── Show hamburger only on mobile ─── */
+@media (min-width: 768px) {
+  .ham { display: none; }
+  .nav-links { display: flex !important; }
+}
+
+/* ─── Touch: remove hover effects that feel wrong ─── */
+@media (hover: none) {
+  .food-card:hover    { transform: none; }
+  .stat-card:hover    { transform: none; box-shadow: var(--shadow-card); }
+  .card:hover         { transform: none; box-shadow: var(--shadow-card); }
+  .tab-btn:hover      { transform: none; }
+  .lb-row:hover       { transform: none; }
+  .btn-primary:hover  { transform: none; }
+  .btn-secondary:hover { transform: none; }
+}
+
+/* ─── Fluid typography ─── */
+h1 { font-size: clamp(2.2rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.6rem); }
+h3 { font-size: clamp(1.1rem, 2vw, 1.6rem); }
+p  { font-size: clamp(0.88rem, 1.5vw, 1rem); }
+
+/* ─── Safe areas (notch) ─── */
+@supports (padding-top: env(safe-area-inset-top)) {
+  #navbar { padding-top: env(safe-area-inset-top); }
+  body    { padding-bottom: env(safe-area-inset-bottom); }
+}
